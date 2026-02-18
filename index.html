@@ -111,12 +111,7 @@
     try{
       // NOTE: daily does NOT include "time" here
       const url =
-        "https://api.open-meteo.com/v1/forecast" +
-        "?latitude=38.9072&longitude=-77.0369" +
-        "&current=temperature_2m,weather_code" +
-        "&daily=weather_code,temperature_2m_max,temperature_2m_min" +
-        "&temperature_unit=fahrenheit" +
-        "&timezone=America%2FNew_York";
+         "https://restless-surf-8ddd.matt-huefner.workers.dev/";
 
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
