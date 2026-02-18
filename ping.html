@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8">
+<body style="font-family:system-ui">
+<h1 id="s">Testing…</h1>
+<script>
+(async ()=>{
+  try{
+    const r = await fetch("https://api.open-meteo.com/v1/forecast?latitude=38.9&longitude=-77.0&current=temperature_2m");
+    document.getElementById("s").textContent = "OK: " + r.status;
+  }catch(e){
+    document.getElementById("s").textContent = "FAIL: " + (e.name || "") + " " + (e.message || e);
+  }
+})();
+</script>
+</body>
