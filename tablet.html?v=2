@@ -64,7 +64,9 @@
   </div>
 
 <script>
-  function svg(type){
+  document.getElementById("cond").textContent = "JS RUNNING";
+document.getElementById("updated").textContent = "JS started";
+function svg(type){
     const common = 'viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"';
     const sun = `<svg ${common}><circle cx="32" cy="32" r="12" stroke="currentColor" stroke-width="4"/>
       <path d="M32 6v10M32 48v10M6 32h10M48 32h10M13 13l7 7M44 44l7 7M51 13l-7 7M20 44l-7 7"
