@@ -1,0 +1,20 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JS Test</title>
+<style>
+  body{margin:0;background:#000;color:#fff;font-family:system-ui}
+  .big{font-size:64px;font-weight:900;padding:40px}
+  .small{opacity:.7;padding:0 40px 40px}
+</style>
+
+<div class="big" id="cond">LOADING</div>
+<div class="small" id="updated">Updating…</div>
+
+<script>
+  document.getElementById("cond").textContent = "JS RUNNING";
+  let n = 0;
+  setInterval(() => {
+    document.getElementById("updated").textContent = "tick " + (++n);
+  }, 1000);
+</script>
